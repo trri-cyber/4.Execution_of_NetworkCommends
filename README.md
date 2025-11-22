@@ -1,6 +1,4 @@
-# 4a.Execution_of_NetworkCommands
-## NAME:RISHAB P DOSHI
-## REG NO: 212224240134
+# 4.Execution_of_NetworkCommands
 ## AIM :Use of Network commands in Real Time environment
 ## Software : Command Prompt And Network Protocol Analyzer
 ## Procedure: To do this EXPERIMENT- follows these steps:
@@ -28,52 +26,38 @@ This commands includes
 • Other IP Commands e.g. show ip route etc.
 <BR>
 
-## PROGRAM
-## PING COMMAND:
-## CLIENT:
-```
-import socket 
-from pythonping import ping 
-s=socket.socket() 
-s.bind(('localhost'8000)) 
-s.listen(5) 
-c,addr=s.accept() 
-while True: 
-    hostname=c.recv(1024).decode() 
-    try: 
-        c.send(str(ping(hostname, verbose=False)).encode()) 
-    except KeyError: 
-        c.send("Not Found".encode())
-```
-## SERVER:
-```
-import socket 
-s=socket.socket() 
-s.connect(('localhost',8000)) 
-while True: 
-    ip=input("Enter the website you want to ping ") 
-    s.send(ip.encode()) 
-    print(s.recv(1024).decode())
-```
-## TRACERT COMMAND:
+## Output
 
-```
-from scapy.all import *
-target = ["www.google.com"]
-result, unans = traceroute(target,maxttl=32)
-print(result,unans)
-```
+## NETSTAT
+![Screenshot 2024-10-19 205718](https://github.com/user-attachments/assets/319707aa-6826-4624-b064-16fe84a5606a)
 
-## OUTPUT:
-## PING COMMAND:
-## CLIENT:
-![image](https://github.com/23002027/4.Execution_of_NetworkCommends/assets/139752981/77643755-1234-447a-bd60-1e62d05ce6d3)
+## IPCONFIG
+![Screenshot 2024-10-19 210228](https://github.com/user-attachments/assets/2699d53c-d133-4a80-b6d6-f9ee9931ed3d)
 
-## SERVER:
-![image](https://github.com/23002027/4.Execution_of_NetworkCommends/assets/139752981/497c329a-2f74-40ec-a51d-6eeb2646ff49)
+## PING
+![Screenshot 2024-10-19 210119](https://github.com/user-attachments/assets/c7fb00e2-3cad-47e8-b1c1-f83dd2e3cb92)
 
-## TRACERT COMMAND:
-![image](https://github.com/23002027/4.Execution_of_NetworkCommends/assets/139752981/7e5ba468-7a22-4bdb-975d-c3ba4a2aef72)
+## TRACERT
+![Screenshot 2024-10-19 210450](https://github.com/user-attachments/assets/978de967-a464-4b25-8f6b-3e0ba3108ecf)
+
+## NSLOOKUP
+![Screenshot 2024-10-19 210146](https://github.com/user-attachments/assets/27442a2f-8142-435d-b6d7-519108f4ca7b)
+
+## GETMAC
+![Screenshot 2024-10-19 210540](https://github.com/user-attachments/assets/476c1334-6f03-4255-a726-201b431d06fc)
+
+## HOSTNAME
+![Screenshot 2024-10-19 210627](https://github.com/user-attachments/assets/7b52b169-cbe8-4b05-8acb-274f2c1566b5)
+
+## NBTSTAT
+![Screenshot 2024-10-19 210643](https://github.com/user-attachments/assets/99653a10-3ff7-41da-a3cd-074fec878fc7)
+
+## ARP
+![Screenshot 2024-10-19 210701](https://github.com/user-attachments/assets/98cd8d15-23a4-42da-93a1-4cb0c3714028)
+
+## SYSTEM INFO
+
+![Screenshot 2024-10-19 210813](https://github.com/user-attachments/assets/9563669c-9e93-469d-a129-13ab5cc9b924)
 
 ## Result
-Thus Execution of Network commands Performed.
+Thus Execution of Network commands Performed 
